@@ -71,10 +71,28 @@ public class TextureHandler{
 	public void startStep(){
 		batch.begin();
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+		int widthBlocks = 0;
+		int heightBlocks = 0;
+		switch(GameSettings.ASPECT_RATIO){
+			case StayjrConstants.ASPECT_LANDSCAPE:
+				widthBlocks = 32;
+				heightBlocks = 18;
+				break;
+			case GameSettings.ASPECT_PORTRAIT:
+				widthBlocks = 18;
+				heightBlocks = 32;
+				break;
+			default:
+				widthBlocks = 32;
+				heightBlocks = 18;
+				break;
+		}
+
 		screenWidth = Gdx.graphics.getWidth();
 		screenHeight = Gdx.graphics.getHeight();
-		pixelsPerBottomBlockside = (double) screenWidth / 32;
-		pixelsPerSideBlockside = (double) screenHeight / 18;
+		pixelsPerBottomBlockside = (double) screenWidth / widthBlocks;
+		pixelsPerSideBlockside = (double) screenHeight / heightBlocks;
 		OrthographicCamera orthoCam = new OrthographicCamera((float) screenWidth, (float) screenHeight);
 		orthoCam.position.set((float) screenWidth / 2, (float) screenHeight / 2, 0);
 		orthoCam.update();
