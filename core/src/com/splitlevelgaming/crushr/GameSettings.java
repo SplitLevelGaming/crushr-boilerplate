@@ -1,5 +1,5 @@
 
-package com.splitlevelgaming.crushr;
+package com.splitlevelgaming.stayjr;
 
 public interface GameSettings{
   //Default values are all 0

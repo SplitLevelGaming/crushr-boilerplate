@@ -1,4 +1,4 @@
-package com.splitlevelgaming.crushr;
+package com.splitlevelgaming.stayjr;
 
 import com.badlogic.gdx.graphics.Texture;
 import java.util.ArrayList;
