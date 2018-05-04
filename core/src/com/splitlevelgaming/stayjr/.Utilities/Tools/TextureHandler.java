@@ -79,7 +79,7 @@ public class TextureHandler{
 				widthBlocks = 32;
 				heightBlocks = 18;
 				break;
-			case GameSettings.ASPECT_PORTRAIT:
+			case StayjrConstants.ASPECT_PORTRAIT:
 				widthBlocks = 18;
 				heightBlocks = 32;
 				break;
