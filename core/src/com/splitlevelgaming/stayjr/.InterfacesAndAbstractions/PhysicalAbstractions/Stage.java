@@ -16,7 +16,6 @@ public abstract class Stage extends Physical implements PhysicalReferencer{
     this.toolBox = toolBox;
     this.props = new ArrayList<Prop>();
     this.background = backgroundTextureName;
-    loadOutsideWalls();
     loadInitialProps();
   }
 
@@ -57,13 +56,6 @@ public abstract class Stage extends Physical implements PhysicalReferencer{
       props.set(i, props.get(propIndex));
       props.set(propIndex, temporary);
     }
-  }
-
-  protected void loadOutsideWalls(){
-    addProp(new Prop_Barrier(this, -1, 0, 1, 18, "img_barrel", toolBox, false));
-    addProp(new Prop_Barrier(this, 32, 0, 1, 18, "img_barrel", toolBox, false));
-    addProp(new Prop_Barrier(this, -1, -1, 34, 1, "img_barrel", toolBox, false));
-    addProp(new Prop_Barrier(this, -1, 18, 34, 1, "img_barrel", toolBox, false));
   }
 
   protected void addProp(Prop newProp){
