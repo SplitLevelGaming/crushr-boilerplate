@@ -1,4 +1,4 @@
-package com.splitlevelgaming.crushr;
+package com.splitlevelgaming.stayjr;
 
 public interface PhysicalReferencer{
   public void removePhysicalReferences(Physical physical);

@@ -1,4 +1,4 @@
-package com.splitlevelgaming.crushr;
+package com.splitlevelgaming.stayjr;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import java.util.Hashtable;
